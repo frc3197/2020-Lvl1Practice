@@ -15,23 +15,25 @@ import frc.robot.RobotMap.CANSparkMaxID;
 
 /**
  * Add your docs here.
- * 
- * @param 
+ *
+ * @param
  */
 public class DriveTrain extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
+
+ // Creates a sparkMax motor object.
   public static CANSparkMax m1SparkMax = new CANSparkMax(CANSparkMaxID.kMotor1.id, MotorType.kBrushless);
 
 
 
   @Override
   public void initDefaultCommand() {
-    
+
     // Set the default command for a subsystem here.
     // setDefaultCommand(new MySpecialCommand());
 
-    
+
 
 
   }

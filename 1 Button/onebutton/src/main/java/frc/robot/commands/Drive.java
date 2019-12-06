@@ -13,8 +13,8 @@ import frc.robot.subsystems.DriveTrain;
 
 public class Drive extends Command {
   public Drive() {
-    // Use requires() here to declare subsystem dependencies
-    // eg. requires(chassis);
+// If someone tries to use the Drive command without a driveTrain it will stop them from using it.
+requires(Robot.driveTrain);
   }
 
   // Called just before this Command runs the first time
@@ -25,16 +25,18 @@ public class Drive extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    
+
+    // When a true is stored in buttonDrive the motorValue is set to .9
       if((OI.buttonDrive()) == true)
       {
-        DriveTrain.m1SparkMax.set(1);
+        DriveTrain.m1SparkMax.set(RobotMap.driveValue);
       }
+   // Else it will store a 0 effectively stopping it.
       else
-        DriveTrain.m1SparkMax.set(0);
+        DriveTrain.m1SparkMax.set(RobotMap.driveValueReset);
     }
 
-  
+
 
   // Make this return true when this Command no longer needs to run execute()
   @Override
@@ -45,7 +47,7 @@ public class Drive extends Command {
   // Called once after isFinished returns true
   @Override
   protected void end() {
-
+    //When the code is turned off it will reset it to zero.
    DriveTrain.m1SparkMax.set(0);
 
   }

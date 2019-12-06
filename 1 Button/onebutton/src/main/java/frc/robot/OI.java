@@ -16,8 +16,8 @@ import edu.wpi.first.wpilibj.XboxController;
 public class OI {
   private static XboxController driver = new XboxController(0);
 
-
-  public static boolean buttonDrive() 
+// If the A button is pressed a true will be returned to the buttonDrive function.
+  public static boolean buttonDrive()
   {
   return driver.getAButton();
   }
