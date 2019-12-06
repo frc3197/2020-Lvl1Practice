@@ -23,7 +23,7 @@ public class DriveTrain extends Subsystem {
   // here. Call these from Commands.
 
  // Creates a sparkMax motor object.
-  public static CANSparkMax MiddleWheelSparkMax = new CANSparkMax(CANSparkMaxID.kMotor1.id, MotorType.kBrushless);
+  public static CANSparkMax LeftFrontWheel = new CANSparkMax(CANSparkMaxID.kMotor1.id, MotorType.kBrushless);
 
 
 
