@@ -1,4 +1,4 @@
-# 2020-Pre-Lvl1Practice
+# 2020-Lvl1Practice
 This is the code for passing level 1 of coding.
 The activity is to make a motor run with a button on the controller.
 
