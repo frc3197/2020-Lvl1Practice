@@ -29,11 +29,11 @@ requires(Robot.driveTrain);
     // When a true is stored in buttonDrive the motorValue is set to .9
       if((OI.buttonDrive()) == true)
       {
-        DriveTrain.m1SparkMax.set(RobotMap.driveValue);
+        DriveTrain.MiddleWheelSparkMax.set(RobotMap.driveValue);
       }
    // Else it will store a 0 effectively stopping it.
       else
-        DriveTrain.m1SparkMax.set(RobotMap.driveValueReset);
+        DriveTrain.MiddleWheelSparkMax.set(RobotMap.driveValueReset);
     }
 
 
@@ -48,7 +48,7 @@ requires(Robot.driveTrain);
   @Override
   protected void end() {
     //When the code is turned off it will reset it to zero.
-   DriveTrain.m1SparkMax.set(0);
+   DriveTrain.MiddleWheelSparkMax.set(0);
 
   }
 
